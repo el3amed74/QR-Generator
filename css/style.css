@@ -23,7 +23,7 @@ body {
     transition: height .2s ease;
 }
 .container.active{
-    height: 405px;
+    height: 422px;
 }
 h1{
     color: #D9D9D9;
@@ -78,13 +78,17 @@ h1{
     margin-bottom: 5px;
     display: none;
 }
+.save{
+    display: none;
+}
 .qr-code img{
     width: 175px;
     height: 175px;
     padding: 5;
     border: 1px solid #0D0D0D;
 }
-.container.active .qr-code{
+.container.active .qr-code,
+.container.active .save{
     display: block;
 }
 @media (max-width: 430px){
