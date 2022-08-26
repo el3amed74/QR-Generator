@@ -12,52 +12,86 @@ body {
     align-items: center;
     padding: 0 10px;
     min-height: 100vh;
+    background: #A6A6A6;
 }
 
 .container {
-    background: #3498DB;
+    height: 230px;
+    background: #404040;
     padding: 20px 25px 0;
     border-radius: 7px;
     transition: height .2s ease;
 }
-
-.taps {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+.container.active{
+    height: 405px;
 }
-
-.taps li {
-    font-size: 20px;
-    font-weight: 400;
-    padding: 5px;
-    width: 50%;
-    text-align: center;
-    background: #18e6d3;
-    border: 1px solid green;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .2s;
+h1{
+    color: #D9D9D9;
+    font-size: 28px;
 }
-
-.content>div{
-    background: #ffffff;
+.content {
+    background: #A6A6A6;
+    color: #404040;
     padding: 10px; 
     padding-bottom: 19px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 2px 0;
 }
-.content>div p{
+.content  p{
+    /* font-size: 20px; */
     font-weight: 500;
     padding: 8px 0px;
 }
-.content>div input{
+.content input{
     width: 80%;
     padding: 3px;
     border-radius: 6px;
+    outline: none;
+    background-color: #D9D9D9;
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
-
-.content>div:not(:first-child){
+.loadImg{
+    width: 80%;
+    padding: 3px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #A6A6A6;
+    color: #D9D9D9;
+}
+.btn{
+    width: 100%;
+    padding: 5px;
+    background: #A6A6A6;
+    color: #D9D9D9;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.qr-code{
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-bottom: 5px;
     display: none;
+}
+.qr-code img{
+    width: 175px;
+    height: 175px;
+    padding: 5;
+    border: 1px solid #0D0D0D;
+}
+.container.active .qr-code{
+    display: block;
+}
+@media (max-width: 430px){
+    .container{
+        height: 250px;
+    }
+    .container.active{
+        height: 435px;
+    }
 }
