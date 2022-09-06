@@ -2,9 +2,7 @@ const generateQRCode = () => {
     let qrImg = document.querySelector(".qr-code img"),
         container = document.querySelector(".container"),
         textInput = document.querySelector(".content input"),
-        generateBTN = document.querySelector(".container .btn"),
-        saveqr = document.querySelector(".save"),
-        saveimg = document.querySelector(".saved");
+        generateBTN = document.querySelector(".container .btn");
     generateBTN.addEventListener("click", () => {
         let textvalue = textInput.value;
         if (!textvalue) return;
@@ -23,23 +21,6 @@ const generateQRCode = () => {
             container.classList.remove("active");
             textvalue = "";
         }
-    });
-    let file;
-    saveqr.addEventListener("click", () => {
-        file=getMediaSource();
-        console.log(file.readyState);
-        qrImg.src=URL.createObjectURL(file);
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        canvas.width = qrImg.naturalWidth;
-        canvas.height = qrImg.naturalHeight;
-        context.scale(1, 1);
-        // saveimg.src=URL.createObjectURL(qrImg);
-        context.drawImage(qrImg, canvas.width, canvas.height);
-        const link = document.createElement("a");
-        link.download = "qr.jpg";
-        link.href = canvas.toDataURL();
-        link.click();
     });
 }
 generateQRCode();
