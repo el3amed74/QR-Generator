@@ -13,8 +13,6 @@ const generateQRCode = () => {
             generateBTN.innerText = "Generate QR Code";
             textInput.value = "";
         });
-        console.log(saveimg);
-
     });
     textInput.addEventListener("click", () => {
         if (!textInput.value) {

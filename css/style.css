@@ -12,41 +12,43 @@ body {
     align-items: center;
     padding: 0 10px;
     min-height: 100vh;
-    background: #A6A6A6;
+    background: #0D0D0D;
 }
 
 .container {
-    height: 230px;
-    background: #404040;
+    width: 500px;
+    height: 250px;
+    background: #F27405;
     padding: 20px 25px 0;
     border-radius: 7px;
     transition: height .2s ease;
 }
 .container.active{
-    height: 400px;
+    height: 423px;
 }
 h1{
-    color: #D9D9D9;
-    font-size: 28px;
+    color: #0D0D0D;
+    margin: 2px;
+    font-size: 30px;
 }
 .content {
-    background: #A6A6A6;
-    color: #404040;
+    background: #0D0D0D;
     padding: 10px; 
     padding-bottom: 19px;
     border-radius: 5px;
     margin: 2px 0;
 }
 .content  p{
-    font-weight: 500;
+    font-size: 25px;
     padding: 8px 0px;
+    color: white;
 }
 .content input{
     width: 80%;
     padding: 3px;
     border-radius: 6px;
+    margin: 5px 0 5px 0;
     outline: none;
-    background-color: #D9D9D9;
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
 .loadImg{
@@ -60,17 +62,18 @@ h1{
 }
 .btn{
     width: 100%;
-    padding: 5px;
-    background: #A6A6A6;
-    color: #D9D9D9;
-    font-size: 20px;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 25px;
+    border: none;
     border-radius: 5px;
     margin-bottom: 2px;
     cursor: pointer;
 }
 .qr-code{
     width: 100%;
-    background-color: #D9D9D9;
+    background: #0D0D0D;
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
@@ -81,16 +84,15 @@ h1{
     width: 175px;
     height: 175px;
     padding: 5;
-    border: 1px solid #0D0D0D;
 }
 .container.active .qr-code{
     display: block;
 }
 @media (max-width: 430px){
     .container{
-        height: 250px;
+        height: 295px;
     }
     .container.active{
-        height: 435px;
+        height: 483px;
     }
 }
